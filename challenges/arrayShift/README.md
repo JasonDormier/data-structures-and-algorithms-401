@@ -4,7 +4,7 @@ Code challenges for 401
 # Reverse an Array
   * insert element into the middle of an array
 
-## Challenge 01
+## Challenge 02
  * reverse an array without using an built in method
 
 ## Approach & Efficiency
