@@ -1,7 +1,13 @@
 function insertShiftArray(arr, val) {
-  const middle = arr.length / 2;
-  const middleIndex = Math.ceil(middle);
-  arr.splice(middleIndex, 0, val);
-  return arr;
+  let result = [];
+  const mid = Math.ceil(arr.length / 2);
+  for (let i = 0; i < mid; i++) {
+    result[result.length] = arr[i];
+  }
+  result[mid] = val;
+  for (let i = mid; i < arr.length; i++) {
+    result[result.length] = arr[i];
+  }
+  return result;
 }
 module.exports = insertShiftArray;
