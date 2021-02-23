@@ -129,6 +129,61 @@ describe('testing the funciton of a linked node list', () => {
 
     expect(includeTest.head.next.next.value).toEqual(4);
   });
+  it('should show k is greater than the length of the linked list', () => {
 
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node('fish');
+    includeTest.head.next = new linkedList.node('taco');
+    includeTest.head.next.next = new linkedList.node('nugget');
+    includeTest.head.next.next.next = new linkedList.node('french fries');
+    includeTest.insert('Tall glass of Gin');
+    const test = includeTest.kthFromEnd(0);
 
+    expect(test).toEqual(null);
+  });
+
+  it('should show k and the length of the list are the same', () => {
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node(1);
+    includeTest.head.next = new linkedList.node(2);
+    includeTest.head.next.next = new linkedList.node(3);
+    includeTest.head.next.next.next = new linkedList.node(4);
+    includeTest.insert(5);
+    const test = includeTest.kthFromEnd(4);
+
+    expect(test).toEqual(1);
+  });
+
+  it('should show k is not a positive integer', () => {
+
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node(1);
+    includeTest.head.next = new linkedList.node(2);
+    includeTest.head.next.next = new linkedList.node(3);
+    includeTest.head.next.next.next = new linkedList.node(4);
+    includeTest.insert(5);
+    const test = includeTest.kthFromEnd(0);
+
+    expect(test).toEqual(null);
+  });
+
+  it('should show the linked list is of a size 1', () => {
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node(0);
+    const test = includeTest.kthFromEnd(1);
+    expect(test).toEqual(0);
+  });
+
+  it('Should show a “Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node(1);
+    includeTest.head.next = new linkedList.node(2);
+    includeTest.head.next.next = new linkedList.node(3);
+    includeTest.head.next.next.next = new linkedList.node(4);
+    includeTest.insert(5);
+    const test = includeTest.kthFromEnd(4);
+
+    expect(test).toEqual(1);
+  });
 });

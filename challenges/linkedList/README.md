@@ -14,10 +14,13 @@ Code challenges for 401
   * .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
 ## Approach & Efficiency
- * `includes()` O(N) - `insert()` is O(1) - `toString()` is O(N) - `append()` is O(N) - `inserBefore()` is O(1) - `insertAfter()` is O(N)
+ * `includes()` O(N) - `insert()` is O(1) - `toString()` is O(N) - `append()` is O(N) - `inserBefore()` is O(1) - `insertAfter()` is O(N) - `kfromTheEnd()` is O(1)
  * first get familair with the testing environment 
  * made sure everything was setup properly by consoling logging
  * work through each method one at a time.
+
+## Reference
+* stackoverflow.com
 
  ## Collaborators 
  * Carly Dekock
