@@ -12,26 +12,26 @@ class LinkedList {
     this.head = null;
   }
 
-  // traverse() {
-  //   let current = this.head;
+  traverse() {
+    let current = this.head;
 
-  //   while (current) {
-  //     current = current.next;
-  //     console.log(current);
-  //   }
-  // }
+    while (current) {
+      current = current.next;
+      console.log(current);
+    }
+  }
 
-  // append(value) {
-  //   let current = this.head;
+  append(value) {
+    let current = this.head;
 
-  //   while (current) {
-  //     if (current.next === null) {
-  //       current.next = new Node(value);
-  //       return;
-  //     }
-  //     current = current.next;
-  //   }
-  // }
+    while (current) {
+      if (current.next === null) {
+        current.next = new Node(value);
+        return;
+      }
+      current = current.next;
+    }
+  }
 
   insert(value) {
     let current = this.head; //assigning head to current
@@ -71,6 +71,39 @@ class LinkedList {
     string += '{null}';
     console.log(string);
     return string;
+  }
+
+  insertBefore(value, newVal) {
+    let current = this.head;
+    let newNode = new Node(newVal);
+
+    while (current.next !== null) {
+      if (current.value === value) {
+
+        newNode.next = current;
+        this.head = newNode;
+
+      } else if (current.next.value === value) {
+        let temp = current.next;
+        current.next = newNode;
+        newNode.next = temp;
+        return;
+      }
+      current = current.next;
+    }
+  }
+
+  insertAfter(value, newVal) {
+    let current = this.head;
+    while (current) {
+      if (current.value === value) {
+        let newNode = new Node(newVal);
+        let temp = current.next;
+        current.next = newNode;
+        newNode.next = temp;
+      }
+      current = current.next;
+    }
   }
 }
 

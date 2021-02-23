@@ -33,7 +33,7 @@ describe('testing the funciton of a linked node list', () => {
     for (let i = 1; i <= 3; i++) {
       insertNode.insert(`test${[i]}`);
     }
-    console.log(insertNode.head.value);
+
     expect(insertNode.head.next.next.value).toEqual('test1');
     expect(insertNode.head.next.value).toEqual('test2');
     expect(insertNode.head.value).toEqual('test3');
@@ -68,4 +68,67 @@ describe('testing the funciton of a linked node list', () => {
 
     expect(test).toEqual('{Tall glass of Gin} --> {fish} --> {taco} --> {nugget} --> {french fries} --> {null}');
   });
+
+  it('should append a new node with value to the end of the linked list', () => {
+
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node('tuna');
+    includeTest.append('sandwich');
+
+    expect(includeTest.head.next.value).toEqual('sandwich');
+  });
+
+  it('should append a new node with value to the end of the linked list', () => {
+
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node('tuna');
+    includeTest.append('sandwich');
+    includeTest.append('taco sandwich');
+
+    expect(includeTest.head.next.value).toEqual('sandwich');
+    expect(includeTest.head.next.next.value).toEqual('taco sandwich');
+  });
+
+  it('should add a new nde with the given new value immediately before teh first value node', () => {
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node(0);
+    includeTest.head.next = new linkedList.node(1);
+    includeTest.insertBefore(1, 4);
+
+    expect(includeTest.head.next.value).toEqual(4);
+
+  });
+
+  it('should add a new node with the given new value immmediately before the first node', () => {
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node(0);
+    includeTest.head.next = new linkedList.node(1);
+    includeTest.insertBefore(0, 4);
+
+    expect(includeTest.head.value).toEqual(4);
+  });
+
+  it('should add a new node with the given value after the first value node', () => {
+
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node(0);
+    includeTest.head.next = new linkedList.node(1);
+    includeTest.head.next.next = new linkedList.node(2);
+
+    includeTest.insertAfter(1, 4);
+
+    expect(includeTest.head.next.next.value).toEqual(4);
+  });
+
+  it('should add a new node with the given value after the final value node', () => {
+
+    const includeTest = new linkedList.ll();
+    includeTest.head = new linkedList.node(0);
+    includeTest.head.next = new linkedList.node(1);
+    includeTest.insertAfter(1, 4);
+
+    expect(includeTest.head.next.next.value).toEqual(4);
+  });
+
+
 });
