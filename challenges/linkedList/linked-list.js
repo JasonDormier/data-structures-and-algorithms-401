@@ -105,7 +105,41 @@ class LinkedList {
       current = current.next;
     }
   }
+
+  kthFromEnd(k) {
+    let current = this.head;
+    if (current === null || k < 1) {
+      return null;
+    }
+
+    let pointerOne = this.head;
+    let pointerTwo = this.head;
+
+    for (let i = 0; i < k - 1; i++) {
+      if (pointerTwo === null) {
+        return null;
+      }
+      pointerTwo = pointerTwo.next;
+    }
+    while (pointerTwo.next !== null) {
+      pointerOne = pointerOne.next;
+      pointerTwo = pointerTwo.next;
+    }
+    //console.log(p1);
+    return pointerOne.value;
+  }
 }
+
+
+const ll = new LinkedList();
+
+ll.head = new Node(0);
+ll.append(1);
+ll.append(2);
+ll.kthFromEnd(0);
+ll.toString();
+
+
 
 module.exports = {
   'll': LinkedList,
