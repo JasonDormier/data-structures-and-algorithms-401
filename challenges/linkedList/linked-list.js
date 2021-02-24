@@ -128,6 +128,12 @@ class LinkedList {
     //console.log(p1);
     return pointerOne.value;
   }
+
+  zipLists(list1, list2) {
+
+
+  }
+
 }
 
 
@@ -136,8 +142,15 @@ const ll = new LinkedList();
 ll.head = new Node(0);
 ll.append(1);
 ll.append(2);
-ll.kthFromEnd(0);
 ll.toString();
+
+const llTwo = new LinkedList();
+
+llTwo.head = new Node(0);
+llTwo.append(3);
+llTwo.append(4);
+llTwo.toString();
+
 
 
 
