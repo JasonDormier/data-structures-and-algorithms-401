@@ -1,3 +1,4 @@
+
 'use strict';
 
 const linkedList = require('../linked-list.js');
@@ -9,7 +10,6 @@ describe('testing the funciton of a linked node list', () => {
 
     expect(emptyNode).toEqual({ 'head': null });
   });
-
   it('should properly insert into the head of a linked list', () => {
 
     let insertNode = new linkedList.ll();
