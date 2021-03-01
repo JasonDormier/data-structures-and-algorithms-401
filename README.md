@@ -7,3 +7,4 @@
  1. [linked-lists](challenges/linkedList/linked-list.js)
  1. [Zip two linked lists](challenges/linkedList/ll-zip.js)
  1. [Stacks and Queues](stacks-and-queues.js)
+ 1. [Stacks with Queues](stacks-with-queues.js)
