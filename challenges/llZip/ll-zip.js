@@ -36,7 +36,6 @@ class LinkedList {
     console.log(string);
     return string;
   }
-
 }
 
 function zipLists(l1, l2) {
