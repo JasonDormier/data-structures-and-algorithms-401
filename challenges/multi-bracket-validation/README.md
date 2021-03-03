@@ -12,8 +12,7 @@ Code challenges for 401
   * Curly Brackets : {}
 
 ## Approach & Efficiency
- * enqueue() O(1)
- * dequeue() O(n^2)
+ * O(N)
  * made sure everything was setup properly by consoling logging
  * work through each method one at a time.
 
