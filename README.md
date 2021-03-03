@@ -8,3 +8,4 @@
  1. [Zip two linked lists](challenges/linkedList/ll-zip.js)
  1. [Stacks and Queues](stacks-and-queues.js)
  1. [Stacks with Queues](stacks-with-queues.js)
+ 1. [Fifo Animal Shelter](stacks-with-queues.js)
