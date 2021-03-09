@@ -12,7 +12,7 @@ Code challenges for 401
 
 
 ### Reference
-https://medium.com/swlh/binary-search-tree-in-javascript-31cb74d8263b
+https://www.geeksforgeeks.org/find-maximum-or-minimum-in-binary-tree/
 
  ## Collaborators 
  * Carly Dekock
