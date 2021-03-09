@@ -11,3 +11,5 @@
  1. [Fifo Animal Shelter](challenges/fifoAnimalShelter/fifo-animal-shelter.js)
  1. [Multi Bracket Validation](challenges/multiBracketValidation/multi-bracket-validation.js)
  1. [Trees](challenges/tree/tree.js)
+ 1. [BinaryTree](challenges/binaryTree/binary-tree.js)
+ 
