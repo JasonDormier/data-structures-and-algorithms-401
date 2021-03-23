@@ -14,5 +14,6 @@
  1. [BinaryTree](challenges/binaryTree/binary-tree.js)
  1. [k-ary Fizz Buzz](challenges/karyFizzBuzz/kary-fizz-buzz.js)
  1. [Insertion Sort](challenges/insertionSort/insert-sort.js)
+ 1. [Merge Sort](challenges/mergeSort/merge-sort.js)
 
  
