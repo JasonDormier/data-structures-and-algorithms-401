@@ -12,5 +12,7 @@
  1. [Multi Bracket Validation](challenges/multiBracketValidation/multi-bracket-validation.js)
  1. [Trees](challenges/tree/tree.js)
  1. [BinaryTree](challenges/binaryTree/binary-tree.js)
- 1. [BinaryTree](challenges/karyFizzBuzz/kary-fizz-buzz.js)
+ 1. [k-ary Fizz Buzz](challenges/karyFizzBuzz/kary-fizz-buzz.js)
+ 1. [Insertion Sort](challenges/insertionSort/insert-sort.js)
+
  
