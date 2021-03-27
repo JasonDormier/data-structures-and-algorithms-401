@@ -37,17 +37,6 @@ function merge(left, right, arr) {
     }
     k = k + 1;
   }
-
-  // if (i === left.length) {
-  //   for (j in right) {
-  //     arr[k] = right[j];
-  //   }
-
-  // } else {
-  //   for (i in left) {
-  //     arr[k] = left[i];
-  //   }
-  // }
   while (i < left.length) {
     arr[k] = left[i];
     i++;
