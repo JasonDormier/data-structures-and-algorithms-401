@@ -22,7 +22,7 @@ describe('testing the funciton of a Hashtables', () => {
 
   it('should successfully handle a collision within the hashtable', () => {
 
-    expect(test.add('turbo', 'timE')).toStrictEqual(undefined);
+    expect(test.add('obrut', 'Nope')).toStrictEqual(undefined);
   });
 
   it('should successfully retrieve a value from a bucket within the hashtable that has a collision', () => {
