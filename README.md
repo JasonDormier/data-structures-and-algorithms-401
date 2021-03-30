@@ -15,5 +15,7 @@
  1. [k-ary Fizz Buzz](challenges/karyFizzBuzz/kary-fizz-buzz.js)
  1. [Insertion Sort](challenges/insertionSort/insert-sort.js)
  1. [Merge Sort](challenges/mergeSort/merge-sort.js)
+ 1. [Hash Table](challenges/hashTable/hash-table.js)
+ 1. [Repeated Word](challenges/repeatedWord/repeated-word.js)
 
  
