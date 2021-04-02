@@ -17,7 +17,6 @@ class Tree {
   preOrder() {
     const values = [];
     const preOrder = (node) => {
-      //current -> left -> right
       values.push(node.value);
     
       if (node.left) {
