@@ -27,7 +27,7 @@ describe('testing the funciton of a graph', () => {
         const newTest = newGraph.breadthFirst(one);
         console.log(newTest);
 
-        expect(newTest.size).toEqual(1);
+        expect().toEqual();
     });
     it('should succesfully retrieve all nodes from a graph', () =>{
 
