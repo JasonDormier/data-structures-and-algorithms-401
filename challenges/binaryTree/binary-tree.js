@@ -59,6 +59,7 @@ class BinaryTree {
       }
     }
   }
+
   breadthFirstTraversal() {
     let current = this.root;
     const levels = [];
