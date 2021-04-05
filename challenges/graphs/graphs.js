@@ -87,15 +87,15 @@ class Graph {
           traverse(neighbor.vertex, visited);
         }
       }
-    }
+    };
 
     traverse(vertex, visitedVertices);
     return visitedVertices;
   }
 
-  size(vertex){
-      const size = this.depthFirst(vertex);
-      return size.size;
+  size(vertex) {
+    const size = this.depthFirst(vertex);
+    return size.size;
   }
 }
 
@@ -127,7 +127,7 @@ class Graph {
 // console.log(test.size());
 
 module.exports = {
-    Vertex,
-    Edge,
-    Graph
+  Vertex,
+  Edge,
+  Graph,
 };

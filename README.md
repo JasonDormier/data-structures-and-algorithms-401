@@ -17,5 +17,9 @@
  1. [Merge Sort](challenges/mergeSort/merge-sort.js)
  1. [Hash Table](challenges/hashTable/hash-table.js)
  1. [Repeated Word](challenges/repeatedWord/repeated-word.js)
+ 1. [Tree Intersection](challenges/treeIntersection/tree-intersection.js)
+ 1. [Left Join](challenges/leftJoin/left.join.js)
+ 1. [Graphs](challenges/graphs/graphs.js)
+ 
 
  
