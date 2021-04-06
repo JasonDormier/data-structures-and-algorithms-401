@@ -97,3 +97,52 @@ describe('testing the breadth traversal method', () => {
     });
 
 });
+
+describe('testing the breadth traversal method', () => {
+    let grap = new test.Graph();
+
+    let pandora = new test.Vertex('Pandora');
+    let arendelle = new test.Vertex('Arendelle');
+    let metroville = new test.Vertex('Metroville');
+    let monstroplolis = new test.Vertex('Monstroplolis');
+    let narnia = new test.Vertex('Narnia');
+    let naboo = new test.Vertex('Naboo');
+
+    grap.addVertex(pandora);
+    grap.addVertex(arendelle);
+    grap.addVertex(metroville);
+    grap.addVertex(monstroplolis);
+    grap.addVertex(narnia);
+    grap.addVertex(naboo);
+
+    grap.addEdge(pandora, arendelle, 150);
+    grap.addEdge(arendelle, metroville, 99);
+    grap.addEdge(arendelle, monstroplolis, 42);
+    grap.addEdge(metroville, narnia, 37);
+    grap.addEdge(narnia, naboo, 250);
+    grap.addEdge(monstroplolis, naboo, 73);
+    grap.addEdge(metroville, pandora, 82);
+    grap.addEdge(metroville, monstroplolis, 105);
+    grap.addEdge(metroville, naboo, 26);
+
+
+    it('should succesfully return true.', () => {
+        let getEdge = test.getEdge(grap, [metroville, pandora]);
+        expect(getEdge).toEqual(true);
+    });
+
+    it('should succesfully return true.', () => {
+        let getEdge = test.getEdge(grap, [arendelle, monstroplolis, naboo]);
+        expect(getEdge).toEqual(true);
+    });
+
+    it('should succesfully return false.', () => {
+        let getEdge = test.getEdge(grap, [naboo, pandora]);
+        expect(getEdge).toEqual(false);
+    });
+
+    it('should succesfully return false.', () => {
+        let getEdge = test.getEdge(grap, [narnia, arendelle, naboo]);
+        expect(getEdge).toEqual(false);
+    });
+});
