@@ -56,6 +56,7 @@ class Queue {
       this.rear = node;
     }
   }
+
   dequeue() {
     let temp = this.front;
 

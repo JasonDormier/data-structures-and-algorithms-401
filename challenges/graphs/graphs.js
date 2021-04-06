@@ -99,35 +99,46 @@ class Graph {
   }
 }
 
-// let test = new Graph();
 
-// let one = new Vertex('one');
-// let two = new Vertex('two');
-// let three = new Vertex('three');
-// let four = new Vertex('four');
-// let five = new Vertex('five');
-// let six = new Vertex('six');
 
-// test.addVertex(one);
-// test.addVertex(two);
-// test.addVertex(three);
-// test.addVertex(four);
-// test.addVertex(five);
-// test.addVertex(six);
+function getEdge(graph, array) {
+  //let money = 0;
+  for (let i = 0; i < array.length; i++) {
+    // console.log('for loop: ', graph.getNeighbors(array[i]));
+    let current = graph.getNeighbors(array[i]);
+    let weight = graph.getNeighbors(array[i]);
+    // console.log('current: ', [i], weight[0].weight);
 
-// test.addEdge(one, three);
-// test.addEdge(two, four);
-// test.addEdge(one, four);
-// test.addEdge(four, two);
-// test.addEdge(four, five);
-// test.addEdge(two, six);
+    let holder = [];
+    current.forEach(value => {
+      holder.push(value.vertex.value);
+      //console.log('inside map: ', value.vertex.value);
+    });
+    //console.log('holder: ', holder);
+    if (array[i + 1] === undefined) {
+      continue;
+    } else {
+      const neighbor = array[i + 1].value;
 
-// console.log(test.breadthFirst(one));
-// console.log(test.depthFirst(one));
-// console.log(test.size());
+      console.log('weight: ', weight);
+      if (holder.includes(neighbor)) {
+        //console.log('weight: ', array[i + 1]);
+        //money += neighbor.weight;
+
+        //console.log(true);
+        return true;
+      } else {
+        //console.log(false);
+        return false;
+      }
+    }
+  }
+}
+
 
 module.exports = {
   Vertex,
   Edge,
   Graph,
+  getEdge,
 };
