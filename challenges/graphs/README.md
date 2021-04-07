@@ -55,6 +55,9 @@
 1. Find Edges
 * Write a function based on the specifications above, which takes in a graph, and an array of city names. Without utilizing any of the built-in methods available to your language, return whether the full trip is possible with direct flights, and how much it would cost.
 
+1. Depth First
+* Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
 
 ## Approach & Efficiency
 - Space: O(1), Time: O(1) (most things in hashtable are only limited by the linked list or array used as each bucket)
