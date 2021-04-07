@@ -89,7 +89,37 @@ class BinaryTree {
 
     let current = this.root;
     preOrder(current);
+    console.log(arr);
     return arr;
+  }
+
+  preOrderIter() {
+    const stack = [];
+
+    //avoiding an infinite look if the tree is empty
+    if (this.root !== null) {
+      stack[stack.length] = this.root;
+    }
+
+    const result = []; //storing results
+
+    while (stack.length > 0) {
+      let node = stack.pop();
+      result[result.length] = node.value;
+
+      if (node.right !== null) {
+
+        stack[stack.length] = node.right;
+      }
+
+      if (node.left !== null) {
+        stack[stack.length] = node.left;
+
+      }
+    }
+    console.log('stack arr: ', stack.length);
+    console.log(result);
+    return result;
   }
 
   postOrder() {
@@ -131,7 +161,6 @@ class BinaryTree {
     let current = this.root;
     inOrder(current);
     return arr;
-
   }
 
   traverseWithStack() {
@@ -140,7 +169,7 @@ class BinaryTree {
     stack.push(current);
 
     while (stack.length) {
-      console.log('traverse with stack:', current.value);
+      //console.log('traverse with stack:', current.value);
       if (current.right) {
         stack.push(current.right);
       }
@@ -162,7 +191,7 @@ class BinaryTree {
     while (queue.length) {
       current = queue.pop();
 
-      console.log('breadth:', current.value);
+      //console.log('breadth:', current.value);
 
       if (current.left) {
         queue.unshift(current.left);

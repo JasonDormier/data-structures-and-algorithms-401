@@ -135,10 +135,35 @@ function getEdge(graph, array) {
   }
 }
 
+function depth(graph, vertex) {
+
+  const visitedVertices = new Set();
+
+  // stack.push(vertex);
+  visitedVertices.add(vertex);
+  const traverse = (current, visited) => {
+
+    visited.add(current);
+
+    const neighbors = this.getNeighbors(current);
+
+    for (let neighbor of neighbors) {
+      if (!visited.has(neighbor.vertex)) {
+        traverse(neighbor.vertex, visited);
+      }
+    }
+  };
+
+  traverse(vertex, visitedVertices);
+  return visitedVertices;
+}
+
+
 
 module.exports = {
   Vertex,
   Edge,
   Graph,
   getEdge,
+  depth,
 };

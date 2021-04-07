@@ -18,12 +18,12 @@ describe('Testing binary tree and binary tree search', () => {
 
   it('can successfully add a left child and right child to a single root node', () => {
     bt.root = new binaryTree.node(5);
-    bt.root.left = new binaryTree.node(6);
-    bt.root.right = new binaryTree.node(7);
+    bt.root.left = new binaryTree.node(7);
+    bt.root.right = new binaryTree.node(6);
 
     expect(bt.root.value).toEqual(5);
-    expect(bt.root.left.value).toEqual(6);
-    expect(bt.root.right.value).toEqual(7);
+    expect(bt.root.left.value).toEqual(7);
+    expect(bt.root.right.value).toEqual(6);
   });
 
   it('can successfully return a collection from a preorder traversal', () => {
@@ -32,8 +32,10 @@ describe('Testing binary tree and binary tree search', () => {
     bt.root.right = new binaryTree.node(7);
 
     const preOrder = bt.preOrder();
+    const preOrderIter = bt.preOrderIter();
 
     expect(preOrder).toEqual([5, 6, 7]);
+    expect(preOrderIter).toEqual([5, 6, 7]);
   });
 
   it('can successfully return a collection from an inorder traversal', () => {
