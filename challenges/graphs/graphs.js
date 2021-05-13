@@ -158,8 +158,6 @@ function depth(graph, vertex) {
   return visitedVertices;
 }
 
-
-
 module.exports = {
   Vertex,
   Edge,
