@@ -24,7 +24,7 @@ function samesiesSqr(arr1, arr2) {
   //loop through the properties in freqCounter1
   for (let key in freqCounter1) {
 
-    //if the key in freqCounter2 is not a squared return false
+    //if squared key in freqCounter2 doesn't have the same key number as freqCounter1 return false
     if (!(key ** 2 in freqCounter2)) {
       return false;
     }
