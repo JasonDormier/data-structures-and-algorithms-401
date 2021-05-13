@@ -21,9 +21,13 @@ function anagram(str1, str2) {
   for (let i = 0; i < str2.length; i++) {
 
     let letter = str2[i];
+    //loop through the second string and compare to object if the letter doesn't exsist return a false or if a letter has a 0 return false
     if (!compare[letter]) {
+
       return false;
+
     } else {
+
       compare[letter] -= 1;
     }
   }
