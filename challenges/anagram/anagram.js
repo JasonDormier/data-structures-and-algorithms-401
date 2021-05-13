@@ -7,25 +7,24 @@ function anagram(str1, str2) {
     return false;
   }
 
-  //create two empty objects to store and compare array values
-  let anagram1 = {};
-  let anagram2 = {};
+  //create two empty objects to store and compare string values
+  let compare = {};
 
-  //loop through the first array add the val as a property, if it has no value add 1 else ++
-  for (let val of str1) {
-    anagram1[val] = (anagram1[val] || 0) + 1;
+
+  //loop through the first string add the letter as a property, if it has no value add 1 else ++
+  for (let i = 0; i < str1.length; i++) {
+
+    let letter = str1[i];
+    compare[letter] ? compare[letter] += 1 : compare[letter] = 1;
   }
+  //loop through the second string add the letter as a property, if it has no value add 1 else ++
+  for (let i = 0; i < str2.length; i++) {
 
-  //loop through the first array add the val as a property, if it has no value add 1 else ++
-  for (let val of str2) {
-    anagram2[val] = (anagram2[val] || 0) + 1;
-  }
-
-  //loop through the properties in anagram1
-  for (let key in anagram1) {
-    //if squared key in anagram2 doesn't have the same key number as anagram1 return false
-    if (!(key in anagram2)) {
+    let letter = str2[i];
+    if (!compare[letter]) {
       return false;
+    } else {
+      compare[letter] -= 1;
     }
   }
   return true;
