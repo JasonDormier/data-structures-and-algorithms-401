@@ -19,6 +19,8 @@ function reverseStringThree(str){
 
 }
 
+console.log(reverseStringThree('test'));
+
 module.exports = {
     'reverse': stringReverse,
     'reverse2': reverseStringTwo,
