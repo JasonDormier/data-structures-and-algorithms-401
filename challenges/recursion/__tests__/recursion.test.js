@@ -5,6 +5,8 @@ const factorial = require('../factorial.js');
 const productOfArray = require('../productOfArray.js');
 const reverseString = require('../reverseString.js');
 const recursiveRange = require('../recursiveRange.js');
+const recursiveFib = require('../fib.js');
+const isPalindrome = require('../palindrome.js');
 
 describe('tests for the function power, use recursion to find the exponent of a base number', () => {
   it('should return the power of the base number ', () => {
@@ -56,7 +58,7 @@ describe('tests for the function to reverse a string using recursion.', () => {
   });
 });
 
-describe('tests for the sum of the 0 - n using recursion to find the product of an array', () => {
+describe('tests for the sum of the 0 - n using recursion', () => {
   it('should return the the sum of the number from 0 to n ', () => {
 
     const test = recursiveRange(6);
@@ -64,5 +66,31 @@ describe('tests for the sum of the 0 - n using recursion to find the product of 
 
     expect(test).toEqual(21);
     expect(test2).toEqual(55);
+  });
+});
+
+describe('tests for the fibonacci sequence using recursion', () => {
+  it('should return the fibonacci number on n ', () => {
+
+    const test = recursiveFib(8);
+    const test2 = recursiveFib(10);
+    const test3 = recursiveFib(32);
+
+    expect(test).toEqual(21);
+    expect(test2).toEqual(55);
+    expect(test3).toEqual(2178309);
+  });
+});
+
+describe('tests for the a palindrome using recursion', () => {
+  it('should return true if the string is a palindrome and false if not. ', () => {
+
+    const test = isPalindrome('tacocat');
+    const test2 = isPalindrome('amanaplanacanalpanama');
+    const test3 = isPalindrome('not');
+
+    expect(test).toEqual(true);
+    expect(test2).toEqual(true);
+    expect(test3).toEqual(false);
   });
 });
