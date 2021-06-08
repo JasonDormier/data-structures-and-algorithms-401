@@ -3,7 +3,8 @@
 const power = require('../power.js');
 const factorial = require('../factorial.js');
 const productOfArray = require('../productOfArray.js');
-const reverseString = require('../reverseString.js')
+const reverseString = require('../reverseString.js');
+const recursiveRange = require('../recursiveRange.js');
 
 describe('tests for the function power, use recursion to find the exponent of a base number', () => {
   it('should return the power of the base number ', () => {
@@ -52,5 +53,16 @@ describe('tests for the function to reverse a string using recursion.', () => {
     const test = reverseString('This is how you reverse a string with recursion');
 
     expect(test).toEqual('noisrucer htiw gnirts a esrever uoy woh si sihT');
+  });
+});
+
+describe('tests for the sum of the 0 - n using recursion to find the product of an array', () => {
+  it('should return the the sum of the number from 0 to n ', () => {
+
+    const test = recursiveRange(6);
+    const test2 = recursiveRange(10);
+
+    expect(test).toEqual(21);
+    expect(test2).toEqual(55);
   });
 });
