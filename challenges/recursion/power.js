@@ -5,10 +5,4 @@ function power(base, exponent) {
   return base * power(base, exponent - 1);
 }
 
-function factorial(num) {
-
-  if (num === 1) return 1;
-  return num + factorial(num - 1);
-}
-
-module.exports = power, factorial;
+module.exports = power;
