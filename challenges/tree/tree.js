@@ -89,7 +89,7 @@ class BinaryTree {
 
     let current = this.root;
     preOrder(current);
-    console.log(arr);
+    console.log('preOrder traversal: ', arr);
     return arr;
   }
 
@@ -138,6 +138,7 @@ class BinaryTree {
 
     let current = this.root;
     postOrder(current);
+    console.log('post order traversal: ', arr);
     return arr;
   }
 
@@ -160,6 +161,7 @@ class BinaryTree {
 
     let current = this.root;
     inOrder(current);
+    console.log('in order traversal: ', arr);
     return arr;
   }
 
