@@ -29,29 +29,29 @@ hTThree.add('bunny', 'jam');
 describe('Tests the leftJoin function', () => {
   test('when two tables of the same length are compared with some matching keys it should return all the keys from the first HT with the value from HT1 and any relevant values from HT2, if there is not a relevant value for the key the word null will return', () => {
     expect(leftJoin(hTOne, hTTwo)).toStrictEqual([
-      [ 'wrath', 'anger', 'delight' ],
-      [ 'diligent', 'employed', 'idle' ],
-      [ 'guide', 'usher', 'follow' ],
-      [ 'fond', 'enamored', 'averse' ],
-      [ 'outfit', 'garb', null ]
+      ['wrath', 'anger', 'delight'],
+      ['diligent', 'employed', 'idle'],
+      ['guide', 'usher', 'follow'],
+      ['fond', 'enamored', 'averse'],
+      ['outfit', 'garb', null],
     ]);
   });
   test('When the same hash table is passed in twice all the keys should be returned with 2 values', () => {
     expect(leftJoin(hTOne, hTOne)).toStrictEqual([
-      [ 'wrath', 'anger', 'anger' ],
-      [ 'diligent', 'employed', 'employed' ],
-      [ 'guide', 'usher', 'usher' ],
-      [ 'fond', 'enamored', 'enamored' ],
-      [ 'outfit', 'garb', 'garb' ]
+      ['wrath', 'anger', 'anger'],
+      ['diligent', 'employed', 'employed'],
+      ['guide', 'usher', 'usher'],
+      ['fond', 'enamored', 'enamored'],
+      ['outfit', 'garb', 'garb'],
     ]);
   });
   test('When 2 tables with no matching keys are compared we will get a return array with null as the third element in every array within the return array', () => {
     expect(leftJoin(hTOne, hTThree)).toStrictEqual([
-      [ 'wrath', 'anger', null ],
-      [ 'diligent', 'employed', null ],
-      [ 'guide', 'usher', null ],
-      [ 'fond', 'enamored', null ],
-      [ 'outfit', 'garb', null ]
+      ['wrath', 'anger', null],
+      ['diligent', 'employed', null],
+      ['guide', 'usher', null],
+      ['fond', 'enamored', null],
+      ['outfit', 'garb', null],
     ]);
   });
 });
