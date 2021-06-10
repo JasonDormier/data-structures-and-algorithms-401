@@ -1,6 +1,6 @@
 'use strict';
 
-function anagramHold(str1, str2) {
+function anagram(str1, str2) {
   //check to see if both arrays are the same length. IF you return false
   if (str1.length !== str2.length) {
     console.log('false 1', false);
@@ -36,7 +36,7 @@ function anagramHold(str1, str2) {
   return true;
 }
 
-function anagram(str, str2){
+function anagramTwo(str, str2){
   if(str.length !== str2.length){
     return false;
   }
@@ -48,4 +48,7 @@ function anagram(str, str2){
   else return false;
 }
 
-module.exports = anagram;
+module.exports = {
+  'one' : anagram,
+  'two' : anagramTwo,
+};
