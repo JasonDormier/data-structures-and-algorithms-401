@@ -25,4 +25,14 @@ function reverseInteger(x) {
   }
 }
 
+function reverse(x) {
+
+  if (x === 0) return 0;
+
+  const reverse = Math.abs(x).toString().split('').reverse().join('');
+
+  console.log(reverse);
+}
+
+console.log(reverse(123));
 module.exports = reverseInteger;
