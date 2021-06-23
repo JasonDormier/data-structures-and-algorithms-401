@@ -20,11 +20,9 @@ function reverseInteger(x) {
     for (let i = str.length - 1; i >= 0; i--) {
       newStr += str[i];
     }
-    if (parseInt(newStr) > 2 ** 31 - 1) console.log(0);
+    if (parseInt(newStr) > 2 ** 31 - 1) return 0;
     return parseInt(newStr);
   }
 }
-
-console.log(reverseInteger(1534236469));
 
 module.exports = reverseInteger;
