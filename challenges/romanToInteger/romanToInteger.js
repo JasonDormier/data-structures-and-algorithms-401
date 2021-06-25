@@ -23,19 +23,4 @@ const romanToInt = (s) => {
   return num;
 };
 
-console.log(romanToInt('III'));
-console.log(romanToInt('VI'));
-console.log(romanToInt('X'));
-console.log(romanToInt('XIII'));
-console.log(romanToInt('XV'));
-console.log(romanToInt('XXX'));
-console.log('');
-console.log(romanToInt('IV'));
-console.log(romanToInt('IX'));
-console.log(romanToInt('XL'));
-console.log(romanToInt('ML'));
-console.log(romanToInt('MCMXCIV'));
-console.log(romanToInt('LVIII'));
-
-
 module.exports = romanToInt;
