@@ -1,33 +1,46 @@
 'use strict';
 
 const maxConsecutiveOnes = (nums, k) => {
-
+    console.log('nums length: ', nums.length);
+    let i = 0;
     let counter = 0;
-    let compare = 0;
+    let zero = 0;
+    let subArray = 0;
 
-    for (let i = 0; i < nums.length; i++) {
-
-        if (nums[i] === 1) counter++;
-
-        //need to figure out the addition that will check the comparsion of k to the 0's and 1's
-        if (nums[i] === 0 && nums[i + k] === 0) {
-
-            if (compare < counter) {
-                compare = counter;
+    while (i < nums.length) {
+        if (counter > 0 && nums[i] === 0) {
+            if (zero >= k) {
+                if (subArray < counter) subArray = counter;
+                zero = 0;
                 counter = 0;
             }
+            zero++;
         }
-        if (nums[i] === 0 && nums[i + 1] === undefined && nums[i - k] === 1) counter++
-    }
-    console.log('counter: ', counter);
-    console.log('compare: ', compare);
-    if (compare > counter) return compare;
-    return counter;
 
+        if (nums[i] === 1) {
+            if (zero >= k) {
+                if (subArray < counter) subArray = counter;
+                counter = 0;
+            }
+            
+            counter += zero;
+            zero = 0;
+            counter++;
+        }
+        console.log('i:-------------', i);
+        console.log('zero: ', zero);
+        console.log('counter: ', counter);
+        console.log('subArray: ', subArray);
+        i++;
+    }
+    counter += zero;
+    if (counter > subArray) return counter;
+    return subArray;
 }
 
 
+console.log(maxConsecutiveOnes([0,0,1,1,1,0,0], 0));
 
-console.log(maxConsecutiveOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2));
-console.log(maxConsecutiveOnes([0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], 3));
+//console.log(maxConsecutiveOnes([1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], 2));
+//console.log(maxConsecutiveOnes([0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], 3));
 module.exports = maxConsecutiveOnes;
