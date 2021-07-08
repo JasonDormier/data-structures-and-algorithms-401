@@ -31,9 +31,7 @@ describe('Testing a function that should Return the index of the first occurrenc
         expect(test).toEqual(0);
         expect(test2).toEqual(0);
 
-    })
-
-
+    });
 });
 console.log()//2
 console.log()//-1

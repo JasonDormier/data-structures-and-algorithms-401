@@ -16,11 +16,11 @@ const strStr = function (haystack, needle) {
 
 }
 
-console.log(strStr('hello', 'll'))
-console.log(strStr('aaaaaa', 'baa'))
-console.log(strStr('', ''))
-console.log(strStr('', 'a'))
-console.log(strStr('a', ''))
-console.log(strStr('a', 'a'))
+// console.log(strStr('hello', 'll'))//2
+// console.log(strStr('aaaaaa', 'baa'))//-1
+// console.log(strStr('', ''))//0
+// console.log(strStr('', 'a'))//-1
+// console.log(strStr('a', ''))//0
+// console.log(strStr('a', 'a'))//0
 
 module.exports = strStr;
