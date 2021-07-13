@@ -14,15 +14,10 @@ const sumOfUnique = function (nums) {
     }
 
     for (let i in map) {
-        if(map[i] === 1) sum += parseInt(i);
-        
+        if (map[i] === 1) sum += parseInt(i);
+
     }
     return sum
 };
-
-console.log(sumOfUnique([1, 2, 3, 2]));
-console.log(sumOfUnique([1, 1, 1, 1, 1]));
-console.log(sumOfUnique([1, 2, 3, 4, 5]));
-console.log(sumOfUnique([10,6,9,6,9,6,8,7]));
-
+console.log(sumOfUnique([10, 6, 9, 6, 9, 6, 8, 7]));
 module.exports = sumOfUnique;
