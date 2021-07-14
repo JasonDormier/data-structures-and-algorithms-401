@@ -19,5 +19,5 @@ const sumOfUnique = function (nums) {
     }
     return sum
 };
-console.log(sumOfUnique([10, 6, 9, 6, 9, 6, 8, 7]));
+
 module.exports = sumOfUnique;
