@@ -24,11 +24,11 @@ const numPlayers = (k, scores) => {
 }
 
 
-// console.log(numPlayers(4, [20, 40, 60, 80, 100]));
+console.log(numPlayers(4, [20, 40, 60, 80, 100]));
 console.log(numPlayers(5, [2, 2, 2, 4, 5]));
-// console.log(numPlayers(5, [1, 1, 1, 4, 5]));
-//console.log(numPlayers(6, [20, 30, 40, 40, 40, 50, 60]));
-//console.log(numPlayers(7, [20, 30, 30, 40, 40, 40, 50, 60]));
+console.log(numPlayers(5, [1, 1, 1, 4, 5]));
+console.log(numPlayers(6, [20, 30, 40, 40, 40, 50, 60]));
+console.log(numPlayers(7, [20, 30, 30, 40, 40, 40, 50, 60]));
 
 const minMoves = (arr) => {
     //console.log(arr);

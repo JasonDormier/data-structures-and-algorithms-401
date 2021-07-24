@@ -2,14 +2,10 @@
 
 const largestPerimeterTri = (nums) => {
 
-    nums.sort((a, b) => a - b );
-    console.log(nums);
+    nums.sort((a, b) => a - b);
 
-    let sum = 0;
-
-    for (let i = nums.length - 3; i >=0; i--) {
-        if(nums[i] + nums[i + 1] > nums[i+2]) return nums[i] + nums[i+1] + nums[i+2];
-        
+    for (let i = nums.length - 3; i >= 0; i--) {
+        if (nums[i] + nums[i + 1] > nums[i + 2]) return nums[i] + nums[i + 1] + nums[i + 2];
     }
     return 0;
 }
