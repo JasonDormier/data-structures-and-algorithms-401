@@ -18,7 +18,7 @@ const plusOne = digits => {
     let merge = BigInt(digits.join(''));
     merge++;
     return merge.toString().split('');
-    console.log(merge);
+
 }
 
 console.log(plusOne([1, 2, 3]));
