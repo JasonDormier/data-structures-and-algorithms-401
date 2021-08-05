@@ -1,49 +1,49 @@
 'use strict';
 
-function mergeSort(arr) {
-  let n = arr.length;
+function mergeSort(lists) {
+  let n = lists.length;
   //console.log(n);
 
   if (n > 1) {
     let mid = n / 2;
-    let left = arr.slice(0, mid);
-    let right = arr.slice(mid);
+    let left = lists.slice(0, mid);
+    let right = lists.slice(mid);
 
-    //console.log('arr: ', left, right, arr);
+    //console.log('lists: ', left, right, lists);
     mergeSort(left);
     mergeSort(right);
-    merge(left, right, arr);
+    merge(left, right, lists);
   }
-  return arr;
+  return lists;
 }
 
-function merge(left, right, arr) {
+function merge(left, right, lists) {
   let i = 0;
   let j = 0;
   let k = 0;
 
 
   while (i < left.length && j < right.length) {
-    //console.log(arr[j]);
+    //console.log(lists[j]);
 
     if (left[i] <= right[j]) {
-      arr[k] = left[i];
+      lists[k] = left[i];
       i = i + 1;
 
     } else {
 
-      arr[k] = right[j];
+      lists[k] = right[j];
       j = j + 1;
     }
     k = k + 1;
   }
   while (i < left.length) {
-    arr[k] = left[i];
+    lists[k] = left[i];
     i++;
     k++;
   }
   while (j < right.length) {
-    arr[k] = right[j];
+    lists[k] = right[j];
     j++;
     k++;
   }
