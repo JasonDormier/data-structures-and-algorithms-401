@@ -56,3 +56,4 @@ console.log(isomorphic('hells', 'byeee')); // false
 
 //     return string === t ? true : false;
 // }
+
