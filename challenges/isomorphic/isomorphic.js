@@ -7,30 +7,59 @@
 //All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
 
 const isomorphic = (s, t) => {
-
+    //let string = '';
+    
     const map = {};
 
     if (s.length !== t.length) return false;
+    if(s === t) return true;
 
     for (let i = 0; i < s.length; i++) {
-        if (!map[s[i]]) map[s[i]] = t[i];
+        let s1 = s[i],
+            t1 = t[i];
+        if(map[s1]) {
+            if(map[s1] !== t1) return false
+        }
+        
+        else if(Object.values(map).includes(t1)) return false;
 
-        if (map[s[i]] !== t[i]) return false;
+        map[s1] = t1;
     }
     return true;
+    // for (let i = 0; i < s.length; i++) {
+    //     string += map[s[i]];
+    // }
+
+    //return string === t ? true : false;
 }
 
 console.log(isomorphic('egg', 'add')); //true
 console.log(isomorphic('foo', "bar")); // false
 console.log(isomorphic('paper', 'title')) // true
-console.log(isomorphic('balls','tetts')); //true
+console.log(isomorphic('balls','tetts')); //false
+console.log(isomorphic('monkey', 'tigers')); //true
 console.log(isomorphic('hells', 'byeee')); // false
 
-//Input: s = "egg", t = "add"
-//Output: true
+const isomorphic = (s, t) => {
+    
+    const map = {};
+    let string = '';
+    
+    if (s.length !== t.length) return false;
+    if(s === t) return true;
 
-//Input: s = "foo", t = "bar"
-//Output: false
+    for (let i = 0; i < s.length; i++) {
+        let s1 = s[i],
+            t1 = t[i];
 
-//Input: s = "paper", t = "title"
-//Output: true
+        
+        if(Object.values(map).includes(t1)) continue;
+        map[s1] = t1;
+    }
+    
+    for (let i = 0; i < s.length; i++) {
+        string += map[s[i]];
+    }
+
+    return string === t ? true : false;
+}
