@@ -15,21 +15,7 @@ const jump = (nums) => {
     //if(nums[i] === 0) return false;
 
     while (i < nums.length) {
-        // console.log('========= round =========== ');
-        // tracker = nums[i];
-        // console.log(`tracker: ${tracker} + i: ${i} = ${nums[tracker + i]}`);
-        // i = tracker + i;
-        // if(nums[i] === 0){
-        //     i -= tracker;
-        //     console.log('i is 0');
-        //     i++;
-        // }
-        // console.log(`======= tracker: ${tracker} + i: ${i} = ${nums[tracker + i]}`);
-        // if(tracker + i >= nums.length -1) return true;
-        // console.log('+++', tracker)
-        // if(nums[tracker + i] === 0) return false;
-        // if(tracker === nums[nums.length] && i === nums.length) return false;
-        // jumps ++;
+
         if (i > tracker) return false;
         if (nums[i] + i > tracker) {
             //console.log(`nums[i]: ${nums[i]} + i: ${i} = ${nums[i] + i}`);
@@ -38,6 +24,7 @@ const jump = (nums) => {
         if (tracker >= nums.length - 1) return true;
 
         i++;
+
         // for (let i = 0; i < nums.length; i++) {
         //     console.log('========= round =========== ');
         //     console.log('nums[i]:', nums[i]);
