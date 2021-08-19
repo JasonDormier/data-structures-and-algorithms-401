@@ -13,7 +13,6 @@ const robotReturn = (moves) => {
         if(moves[i] === 'L')board[1]--;
         if(moves[i] === 'R') board[1]++;
     }
-    console.log(board);
     if(board[0] === 0 && board[1] === 0)return true;
     else return false;
     ///return board[0] === 0 && board[1] === 0 ? false : true;
