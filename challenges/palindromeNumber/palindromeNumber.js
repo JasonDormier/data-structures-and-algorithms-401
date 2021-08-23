@@ -6,10 +6,10 @@ const isPalinedrome = function (x) {
   reverse = parseInt(reverse);
 
   if (x < 0) return false;
+  return x === reverse ? true : false;
+  // if (x === reverse) return true;
 
-  if (x === reverse) return true;
-
-  return false;
+  // return false;
 };
 
 module.exports = isPalinedrome;
