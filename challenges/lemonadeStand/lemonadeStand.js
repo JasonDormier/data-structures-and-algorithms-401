@@ -13,10 +13,9 @@ const lemonadeStand = (bills) => {
     let fives = 0;
     let tens = 0;
 
-    //if(bills[0] !== 5) return false;
+    if(bills[0] !== 5) return false;
 
     for (let i = 0; i < bills.length; i++) {
-        //console.log('round', i, 'bill', bills[i], 'fives', fives, 'tens', tens);
         if(bills[i] === 5) fives++;
         if(bills[i]=== 10) {
             tens++;
@@ -26,7 +25,7 @@ const lemonadeStand = (bills) => {
 
         if(bills[i] === 20){
             if(tens === 0 && fives < 3) return false;
-            else if(tens === 0 && fives >= 3) fives = fives - 3;
+            else if(tens === 0 && fives >= 3) fives -= 3;
             else if(fives === 0) return false;
             else{
                 tens--;
