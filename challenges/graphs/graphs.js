@@ -81,6 +81,7 @@ class Graph {
       visited.add(current);
 
       const neighbors = this.getNeighbors(current);
+      console.log('neighbors: ', neighbors)
 
       for (let neighbor of neighbors) {
         if (!visited.has(neighbor.vertex)) {
@@ -98,8 +99,6 @@ class Graph {
     return size.size;
   }
 }
-
-
 
 function getEdge(graph, array) {
   //let money = 0;
@@ -157,6 +156,30 @@ function depth(graph, vertex) {
   traverse(vertex, visitedVertices);
   return visitedVertices;
 }
+
+const myGraph = new Graph();
+
+myGraph.addVertex('A');
+myGraph.addVertex('B');
+myGraph.addVertex('C');
+myGraph.addVertex('D');
+myGraph.addVertex('E');
+myGraph.addVertex('F');
+myGraph.addVertex('G');
+myGraph.addVertex('H');
+myGraph.addVertex('I');
+myGraph.addEdge('A', 'D', 1);
+myGraph.addEdge('A', 'B', 1);
+myGraph.addEdge('B', 'C', 1);
+myGraph.addEdge('C', 'I', 1);
+myGraph.addEdge('D', 'E', 1);
+myGraph.addEdge('E', 'G', 1);
+myGraph.addEdge('G', 'H', 1);
+myGraph.addEdge('E', 'F', 1);
+//console.log(myGraph);
+myGraph.depthFirst('A');
+// depthFirst(myGraph, 'A');
+
 
 module.exports = {
   Vertex,

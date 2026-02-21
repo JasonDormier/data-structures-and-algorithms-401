@@ -16,10 +16,12 @@ const convertToTitle = (columnNumber) =>{
     console.log('a'.charCodeAt(0));
     console.log('A'.charCodeAt(0));
 
+    
+
 }
 
 console.log(convertToTitle(1))// = 'A'
-console.log(convertToTitle(28))// = 'AB'
-console.log(convertToTitle(701))// = 'ZY'
-console.log(convertToTitle(703))// ='AAA'
-console.log(convertToTitle(2147483647)) // = 'FXSHRXW'
+// console.log(convertToTitle(28))// = 'AB'
+// console.log(convertToTitle(701))// = 'ZY'
+// console.log(convertToTitle(703))// ='AAA'
+// console.log(convertToTitle(2147483647)) // = 'FXSHRXW'

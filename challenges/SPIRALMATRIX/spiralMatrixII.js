@@ -19,7 +19,7 @@ const generateMatrix = n => {
 
     if (!n) return [[]];
 
-    //while(output.length)
+    //while(output.length < n && output[n-1].length < n)
     for (let i = 0; i < n; i++) { 
         //output.push([]);
         output[output.length] = [];
